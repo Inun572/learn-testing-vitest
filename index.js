@@ -16,3 +16,11 @@ export const sumTotal = (numbers) => {
   }
   return sum;
 };
+
+export const fetchDataPromise = () => {
+  return new Promise((resolve) => {
+    setTimeout(() => {
+      resolve('some data');
+    }, 1000);
+  });
+};

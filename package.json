@@ -5,12 +5,16 @@
   "main": "index.js",
   "type": "module",
   "scripts": {
-    "test": "vitest --ui --watch"
+    "test": "vitest --ui --watch",
+    "coverage": "vitest --run --coverage --reporter=verbose",
+    "preview": "npx vite preview --outDir coverage"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "@vitest/coverage-istanbul": "^1.2.2",
+    "@vitest/coverage-v8": "^1.2.2",
     "@vitest/ui": "^1.2.2",
     "vitest": "^1.2.2"
   }

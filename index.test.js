@@ -1,5 +1,5 @@
 import { it, expect, describe } from 'vitest';
-import { sumTotal } from './index.js';
+import { fetchDataPromise, sumTotal } from './index.js';
 
 describe('sumTotal', () => {
   it('should sum total', () => {
@@ -37,5 +37,13 @@ describe('sumTotal', () => {
   it('should yield the same result if any string of numbers are provided', () => {
     const numbers = ['1', '2', 3];
     expect(sumTotal(numbers)).toBe(6);
+  });
+});
+
+describe('fetching data', () => {
+  it('should load data', async () => {
+    const data = await fetchDataPromise();
+
+    expect(data).toBe('some data');
   });
 });
